@@ -60,5 +60,13 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Ninja.sql" />
+    <Build Include="Gear.sql" />
+    <Build Include="GearStore.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="NinjaDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NinjaDB.publish.xml" />
   </ItemGroup>
 </Project>

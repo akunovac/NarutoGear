@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NinjaGearWPFStoreContainer" CdmEntityContainer="NinjagearEntities">
+    <EntitySetMapping Name="Gears">
+      <EntityTypeMapping TypeName="NinjaGearWPF.Gear">
+        <MappingFragment StoreEntitySet="Gear">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Agility" ColumnName="Agility" />
+          <ScalarProperty Name="Intelligence" ColumnName="Intelligence" />
+          <ScalarProperty Name="Gold" ColumnName="Gold" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GearStores">
+      <EntityTypeMapping TypeName="NinjaGearWPF.GearStore">
+        <MappingFragment StoreEntitySet="GearStore">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Intelligence" ColumnName="Intelligence" />
+          <ScalarProperty Name="Agility" ColumnName="Agility" />
+          <ScalarProperty Name="Gold" ColumnName="Gold" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ninjas">
+      <EntityTypeMapping TypeName="NinjaGearWPF.Ninja">
+        <MappingFragment StoreEntitySet="Ninja">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gold" ColumnName="Gold" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Intelligence" ColumnName="Intelligence" />
+          <ScalarProperty Name="Agility" ColumnName="Agility" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

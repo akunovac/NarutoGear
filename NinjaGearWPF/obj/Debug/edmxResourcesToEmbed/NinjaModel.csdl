@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NinjaGearWPF" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Gear">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Strength" Type="Int32" Nullable="false" />
+    <Property Name="Agility" Type="Int32" Nullable="false" />
+    <Property Name="Intelligence" Type="Int32" Nullable="false" />
+    <Property Name="Gold" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ninja" Relationship="NinjaGearWPF.NinjaGear" FromRole="Gear" ToRole="Ninja" />
+    <Property Name="NinjaId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="GearStores" Relationship="NinjaGearWPF.GearGearStore" FromRole="Gear" ToRole="GearStore" />
+  </EntityType>
+  <EntityType Name="GearStore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Strength" Type="Int32" Nullable="false" />
+    <Property Name="Intelligence" Type="Int32" Nullable="false" />
+    <Property Name="Agility" Type="Int32" Nullable="false" />
+    <Property Name="Gold" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Gear" Relationship="NinjaGearWPF.GearGearStore" FromRole="GearStore" ToRole="Gear" />
+  </EntityType>
+  <EntityType Name="Ninja">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gold" Type="Int32" Nullable="false" />
+    <Property Name="Strength" Type="Int32" Nullable="false" />
+    <Property Name="Intelligence" Type="Int32" Nullable="false" />
+    <Property Name="Agility" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Gears" Relationship="NinjaGearWPF.NinjaGear" FromRole="Ninja" ToRole="Gear" />
+  </EntityType>
+  <EntityContainer Name="NinjagearEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Gears" EntityType="Self.Gear" />
+    <EntitySet Name="GearStores" EntityType="Self.GearStore" />
+    <EntitySet Name="Ninjas" EntityType="Self.Ninja" />
+    <AssociationSet Name="NinjaGear" Association="NinjaGearWPF.NinjaGear">
+      <End Role="Ninja" EntitySet="Ninjas" />
+      <End Role="Gear" EntitySet="Gears" />
+    </AssociationSet>
+    <AssociationSet Name="GearGearStore" Association="NinjaGearWPF.GearGearStore">
+      <End Role="Gear" EntitySet="Gears" />
+      <End Role="GearStore" EntitySet="GearStores" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="NinjaGear">
+    <End Type="NinjaGearWPF.Ninja" Role="Ninja" Multiplicity="1" />
+    <End Type="NinjaGearWPF.Gear" Role="Gear" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ninja">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Gear">
+        <PropertyRef Name="NinjaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GearGearStore">
+    <End Type="NinjaGearWPF.Gear" Role="Gear" Multiplicity="1" />
+    <End Type="NinjaGearWPF.GearStore" Role="GearStore" Multiplicity="*" />
+  </Association>
+</Schema>

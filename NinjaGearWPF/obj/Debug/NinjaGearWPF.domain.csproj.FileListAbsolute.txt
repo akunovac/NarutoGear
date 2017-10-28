@@ -1,0 +1,4 @@
+D:\Documents\NarutoGear\NinjaGearWPF\obj\Debug\NinjaGearWPF.domain.csprojResolveAssemblyReference.cache
+D:\Documents\NarutoGear\NinjaGearWPF\obj\Debug\NinjaGearWPF.Properties.Resources.resources
+D:\Documents\NarutoGear\NinjaGearWPF\obj\Debug\NinjaGearWPF.domain.csproj.GenerateResource.Cache
+D:\Documents\NarutoGear\NinjaGearWPF\obj\Debug\NinjaGearWPF.domain.csproj.CoreCompileInputs.cache
