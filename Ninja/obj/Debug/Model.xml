@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="Ninja.dll" />
-			<Metadata Name="FileName" Value="D:\DOCUMENTS\NARUTOGEAR\NINJA\OBJ\DEBUG\NINJA.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\ARIAN\DOCUMENTS\PROJECTCSHARP\NINJA\OBJ\DEBUG\NINJA.DLL" />
 			<Metadata Name="AssemblyName" Value="Ninja" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="D:\Documents\NarutoGear\Ninja\obj\Debug\Ninja.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Arian\Documents\ProjectCSharp\Ninja\obj\Debug\Ninja.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -50,7 +50,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[Ninja].[Id]" />
+								<References Name="[dbo].[GearStore].[Id]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -58,7 +58,7 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[Ninja]" />
+					<References Name="[dbo].[GearStore]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
@@ -88,7 +88,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[GearStore].[Id]" />
+								<References Name="[dbo].[Ninja].[Id]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -96,7 +96,7 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[GearStore]" />
+					<References Name="[dbo].[Ninja]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
@@ -243,7 +243,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="5" />
+						<AttachedAnnotation Disambiguator="3" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -368,7 +368,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="3" />
+						<AttachedAnnotation Disambiguator="5" />
 					</Element>
 				</Entry>
 				<Entry>
